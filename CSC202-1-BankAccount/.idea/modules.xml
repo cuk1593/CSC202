@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BankAccount.iml" filepath="$PROJECT_DIR$/BankAccount.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../CSC202-2-LinkedList/CSC202-2-LinkedList.iml" filepath="$PROJECT_DIR$/../CSC202-2-LinkedList/CSC202-2-LinkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Test/Test.iml" filepath="$PROJECT_DIR$/Test/Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Test/Test.iml" filepath="$PROJECT_DIR$/../Test/Test.iml" />
+    </modules>
+  </component>
+</project>

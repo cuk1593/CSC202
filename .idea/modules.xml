@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CSC202-1-BankAccount/CSC202-1-BankAccount.iml" filepath="$PROJECT_DIR$/CSC202-1-BankAccount/CSC202-1-BankAccount.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CSC202-2-LinkedList/CSC202-2-LinkedList.iml" filepath="$PROJECT_DIR$/CSC202-2-LinkedList/CSC202-2-LinkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CSC202-3-LinearRegression/CSC202-3-LinearRegression.iml" filepath="$PROJECT_DIR$/CSC202-3-LinearRegression/CSC202-3-LinearRegression.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CSC202-4-Calculator/CSC202-4-Calculator.iml" filepath="$PROJECT_DIR$/CSC202-4-Calculator/CSC202-4-Calculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CSC202-5-BinarySearchTree/CSC202-5-BinarySearchTree.iml" filepath="$PROJECT_DIR$/CSC202-5-BinarySearchTree/CSC202-5-BinarySearchTree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CSC202-6-FInalProject/CSC202-6-FInalProject.iml" filepath="$PROJECT_DIR$/CSC202-6-FInalProject/CSC202-6-FInalProject.iml" />
+    </modules>
+  </component>
+</project>
