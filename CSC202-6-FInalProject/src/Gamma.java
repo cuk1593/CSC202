@@ -10,8 +10,8 @@ public class Gamma {
 
     public static final int IMAX = 100;
     public static final double ERROR = 1.0e-10;
-    public static double[] coef = {76.18009173, -86.50532033, 24.01409822, -1.231739516, 0.120858003e-2, -0.536382e-5};\
-    public static double[] arr;
+    public static double[] coef = {76.18009173, -86.50532033, 24.01409822, -1.231739516, 0.120858003e-2, -0.536382e-5};
+    public static long[] arr = new long[21];
     public static double factorial, n, temp, sum, var, bar;
 
     public static double gamma(double a) {
@@ -44,18 +44,20 @@ public class Gamma {
     }
 
     public static double factorial(int n) {
-        int a = 0;
+        int a = 1;
+        long comp = 1;
 
         if (n <= 20) {
-            for (int i = 0; i < n; i++) {
-                arr[i] = a;
-                a++;
+            arr[0] = 1;
+            for (int i = 1; i < n; i++) {
+                arr[i] = arr[i - 1] * i;
             }
-            for (int i = 0; i < n; i++) {
-
-            }
+            return arr[20];
+        } else if ((n < 0)) {
+            throw new java.lang.IllegalArgumentException("Inappropriate argument");
+        } else if ((n > 20)) {
+            Math.exp(logGamma(n+1));
         }
-        return n;
     }
 
     public static void main(String[] args) {
@@ -65,8 +67,6 @@ public class Gamma {
         double a = kb.nextDouble();
         System.out.println("Gamma(a): " + gamma(a));
         System.out.println("Factorial(a-1): " + factorial((int) a));
-
-
     }
 
 }
