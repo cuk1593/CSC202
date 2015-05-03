@@ -12,8 +12,7 @@ public class Gamma {
     public static final double ERROR = 1.0e-10;
     public static double[] coef = {76.18009173, -86.50532033, 24.01409822, -1.231739516, 0.120858003e-2, -0.536382e-5};
     public static long[] nHi = new long[21];
-    public static double n, temp, sum, var, bar;
-    public static long fact;
+    public static double n, temp, sum, var, bar, fact;
 
     public static double gamma(double a) {
         return Math.exp(logGamma(a));
@@ -44,7 +43,7 @@ public class Gamma {
         return var;
     }
 
-    public static double factorial(int n) {
+    public static double factorial(double n) {
         int a = 1;
         long comp = 1;
 
@@ -53,14 +52,14 @@ public class Gamma {
             for (int i = 1; i <= n; i++) {
                 nHi[i] = nHi[i - 1] * i;
             }
-            fact = nHi[n];
+            fact = nHi[(int) n];
         } else if ((n < 0)) {
-            throw new java.lang.IllegalArgumentException("Inappropriate argument");
+        throw new java.lang.IllegalArgumentException("Inappropriate argument");
         } else if ((n > 20)) {
-            fact = (long) Math.exp(logGamma(n+1));
-        }
-        return fact;
+            fact = Math.exp(logGamma(n+1));
     }
+    return fact;
+}
 
     public static void main(String[] args) throws Exception {
         Scanner kb = new Scanner(System.in);
@@ -70,7 +69,7 @@ public class Gamma {
         int b = (int) a;
         System.out.println("Gamma(a): " + gamma(a));
         System.out.println("LogGamma(a): " + logGamma(a));
-        System.out.println("Factorial(a-1): " + factorial(b));
+        System.out.println("Factorial(a-1): " + factorial(a));
     }
 
 }

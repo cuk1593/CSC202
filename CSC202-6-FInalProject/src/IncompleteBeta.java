@@ -1,6 +1,8 @@
 /**
  * Created by admin on 4/20/15.
  */
+
+//studentT method is not returning correct value
 import java.util.Scanner;
 
 public class IncompleteBeta extends Beta {
@@ -59,8 +61,8 @@ public class IncompleteBeta extends Beta {
     }
 
     public static double studentT(int degFreedom, double t) throws Exception {
-        double x = (double)degFreedom / ((double)degFreedom + t * t);
-        return incompleteBeta(0.5 * (double)degFreedom, 0.5, x);
+        double x = degFreedom / (degFreedom + t * t);
+        return incompleteBeta(0.5 * degFreedom, 0.5, x);
     }
 
     public static void main(String[] args) throws Exception {
