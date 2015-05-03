@@ -18,7 +18,7 @@ public class Beta extends Gamma {
         return logGamma(a) + logGamma(b) - logGamma(a+b);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Scanner kb = new Scanner(System.in);
         System.out.println("Enter value a: ");
         double a = kb.nextDouble();
