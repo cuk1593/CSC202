@@ -92,6 +92,7 @@ public class IncompleteGamma extends Gamma {
         Scanner kb = new Scanner(System.in);
         System.out.println("Select incompleteGamma(1), cumPoisson(2), cumNormal(3), chiSquared(4): ");
         int input = kb.nextInt();
+        double y;
 
         switch(input) {
             case 1:
@@ -112,15 +113,15 @@ public class IncompleteGamma extends Gamma {
                 break;
             case 3:
                 System.out.println("Enter normalized Gaussian argument, x: ");
-                x = kb.nextInt();
-                System.out.print("Cumulative Normal = " + cumulativeNormal(x));
+                y = kb.nextDouble();
+                System.out.print("Cumulative Normal = " + cumulativeNormal(y));
                 break;
             case 4:
                 System.out.println("Enter Chi Square value: ");
-                m = kb.nextInt();
+                y = kb.nextDouble();
                 System.out.println("Enter degree of freedom: ");
                 x = kb.nextInt();
-                System.out.print("Chi-Square Probability = " + chiSquare(m, x));
+                System.out.print("Chi-Square Probability = " + chiSquare(y, x));
                 break;
             default:
                 break;

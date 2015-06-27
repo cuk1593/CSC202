@@ -26,6 +26,7 @@ public class IncompleteBeta extends Beta {
     }
 
     private static double continuousFraction(double a, double b, double x) throws Exception {
+        double di;
         double ap1 = (a + 1.0);
         double am1 = (a - 1.0);
         double apb = (a + b);
@@ -37,11 +38,12 @@ public class IncompleteBeta extends Beta {
         int i;
 
         for (i = 1; i <= IMAX; i++) {
+            di = i;
             double twoI = i + i;
-            double numerator = i * (b - 1) * x / ((am1 + twoI) * (a + twoI));
+            double numerator = di * (b - di) * x / ((am1 + twoI) * (a + twoI));
             ap = az + numerator * am;
             bp = bz + numerator * bm;
-            numerator = -(a+i) * (apb + i) * x / ((ap1 + twoI) * a + twoI);
+            numerator = (-1 * (a+di)) * (apb + di) * x / ((ap1 + twoI) * (a + twoI));
             app = ap + numerator * az;
             bpp = bp + numerator * bz;
             aOld = az;
@@ -69,10 +71,8 @@ public class IncompleteBeta extends Beta {
         Scanner kb = new Scanner(System.in);
         System.out.println("Select Incomplete Beta (1) or StudentT(2): ");
         int n = kb.nextInt();
-        double j = 0;
-        double k = 0;
-        double l = 0;
-        int m = 0;
+        double j, k, l;
+        int m;
 
         switch(n) {
             case 1:

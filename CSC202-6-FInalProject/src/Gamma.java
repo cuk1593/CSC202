@@ -68,8 +68,11 @@ public class Gamma {
         double a = kb.nextDouble();
         int b = (int) a;
         System.out.println("Gamma(a): " + gamma(a));
-        System.out.println("LogGamma(a): " + logGamma(a));
-        System.out.println("Factorial(a-1): " + factorial(a));
+        System.out.println("Factorial(a-1): " + factorial(a-1));
+
+        System.out.println("Enter value t: ");
+        double x = kb.nextDouble();
+        System.out.println("Gamma(a, t): " + gamma(a, x));
     }
 
 }

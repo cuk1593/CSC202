@@ -2,6 +2,8 @@
  * Created by admin on 4/21/2015.
  */
 
+import java.util.Scanner;
+
 //coefficients method is not yet completed.
 public class Binomial extends IncompleteBeta {
 
@@ -23,13 +25,13 @@ public class Binomial extends IncompleteBeta {
     }
 
     public static double[] coefficients(int n) {
-        int[] arrA = new int[n+1];
-        for (int i = 0; i < arrA.length; i++) {
-            int k = arrA[i];
-            answer = combinations(n, k);
-            coeff[i] = answer;
+        int k;
+        double[] coef = new double[n+1];
+
+        for (k = 0; k <= n; k++) {
+            coef[k] = combinations(n, k);
         }
-        return coeff[];
+        return coef;
     }
 
     public static double probability(int n, int k, double p) {
@@ -54,6 +56,36 @@ public class Binomial extends IncompleteBeta {
     }
 
     public static void main(String[] args) {
+        Scanner kb = new Scanner(System.in);
+        int n, k;
+        double[] coefArray;
+        double p;
+        System.out.println("Select coefficients(1) or probability(2): ");
+        int c = kb.nextInt();
 
+        switch (c) {
+            case 1:
+                System.out.println("Enter order: ");
+                n = kb.nextInt();
+                coefArray = new double[n+1];
+                coefArray = coefficients(n);
+                for (k = 0; k <= n; k++) {
+                    System.out.println(coefArray[k]);
+                }
+                break;
+            case 2:
+                System.out.println("Enter total number of trials: ");
+                n = kb.nextInt();
+                System.out.print("Enter successes or minimum successes: ");
+                k = kb.nextInt();
+                System.out.print("Enter single-trial probability: ");
+                p = kb.nextDouble();
+                System.out.println("Probability of " + k + " successes = " + probability(n, k, p));
+                System.out.println("Probability of at least " + k + " successes = " + cumulativeProbability(n, k, p));
+                break;
+            default:
+                System.out.println("Improper selection.");
+        }
     }
+
 }
